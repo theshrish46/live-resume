@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/site-components/NavBar";
 import { ThemeProvider } from "@/providers/theme-provider";
+import { ReduxProvider } from "@/providers/redux-state-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,15 +21,17 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <main className="relative flex  flex-col min-h-screen">
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            storageKey="resume-theme"
-            enableSystem={false}
-          >
-            <NavBar />
-            <div>{children}</div>
-          </ThemeProvider>
+          <ReduxProvider>
+            <ThemeProvider
+              attribute="class"
+              defaultTheme="system"
+              storageKey="resume-theme"
+              enableSystem={false}
+            >
+              <NavBar />
+              <div>{children}</div>
+            </ThemeProvider>
+          </ReduxProvider>
         </main>
       </body>
     </html>

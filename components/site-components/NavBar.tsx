@@ -14,7 +14,7 @@ const NavBar = () => {
         </Link>
       </div>
       <div className="flex justify-center items-center gap-x-5">
-        <div>Generate Resume</div>
+        <Link href={"/build-resume"}>Generate Resume</Link>
         <div>
           <ThemeModeToggle />
         </div>
