@@ -1,53 +1,53 @@
 export interface ResumeProfile {
     name: string,
-    email: string
-    phone: string
-    url: string
-    summary: string
-    location: string
+    email: string,
+    phone: string,
+    url: string,
+    summary: string,
+    location: string,
 }
 
 export interface ResumeWorkExperience {
-    company: string
-    jobTitle: string
-    date: string
-    description: string[]
+    company: string,
+    jobTitle: string,
+    date: string,
+    description: string[];
 }
 
 export interface ResumeEducation {
-    school: string
-    degree: string
-    date: string
-    gpa: string
+    school: string,
+    degree: string,
+    date: string,
+    gpa: string,
     description: string[]
 }
 
 export interface ResumeProject {
-    project: string
-    date: string
+    project: string,
+    date: string,
     description: string[]
 }
 
 export interface FeaturedSkill {
-    skill: string
+    skill: string,
     rating: number
 }
 
 export interface ResumeSkills {
-    featuredSkills: FeaturedSkill[]
-    description: string[]
+    featuredSkills: FeaturedSkill[],
+    description: string[];
 }
 
 export interface ResumeCustom {
-    description: string[]
+    description: string[];
 }
 
 export interface Resume {
-    profile: ResumeProfile
-    workExperience: ResumeWorkExperience[]
-    education: ResumeEducation[]
-    projects: ResumeProject[]
-    skills: ResumeSkills
+    profile: ResumeProfile,
+    workExperiences: ResumeWorkExperience[],
+    education: ResumeEducation[],
+    projects: ResumeProject[],
+    skills: ResumeSkills,
     custom: ResumeCustom
 }
 

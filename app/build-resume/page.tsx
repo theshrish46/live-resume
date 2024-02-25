@@ -13,21 +13,15 @@ const Page = () => {
   return (
     <div className="flex justify-center items-center w-full mx-auto my-10">
       <div className="w-11/12 mx-auto flex justify-around items-center gap-x-5">
-        <div className="border-2 border-red-200 w-1/2 h-full">
+        <div className="w-1/2 h-full">
           <h1>Enter your details</h1>
           <FormComponent form={form} />
         </div>
-        <div className="border-2 border-red-200 w-1/2 h-full">
+        <div className="w-1/2 h-full">
           <h1>Your resume</h1>
-          <div>
-            Name: 
-          </div>
-          <div>
-            LastName:
-          </div>
-          <div>
-            Email:
-          </div>
+          <div>Name:</div>
+          <div>LastName:</div>
+          <div>Email:</div>
         </div>
       </div>
     </div>
